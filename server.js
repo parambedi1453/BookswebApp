@@ -8,9 +8,10 @@ const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
 
-
+// Routes
 const indexRouter = require('./routes/index')
 const authorsRouter = require('./routes/authors')
+const bookRouter = require('./routes/books')
 
 app.set('view engine','ejs')
 app.set('views',__dirname+ '/views')
@@ -34,7 +35,9 @@ db.once('open' , () => console.log('connected to Mongoose'))//runns once for che
 
 app.use('/',indexRouter)
 app.use('/authors',authorsRouter)
+app.use('/books',bookRouter)
 // will  be used as authors/  and authors/new
+
 
 // process.env.PORT is pory of the hosting platform elsr the local is 30000
 app.listen(process.env.PORT || 3000)
