@@ -1,6 +1,6 @@
 <div>
     <label>Title</label>
-    <input type="text" name="title"value="<%= book.title %>"  >
+    <input type="text" name="title" value="<%= book.title %>"  >
 </div>
 
 <div>
@@ -18,7 +18,7 @@
 
 <div>
     <label>Publish Date</label>
-    <input type="date" name="publiDate" value="<%= book.publishDate == null ? '' :book.publishDate.toISOString().split('T')[0] %>"  >
+    <input type="date" name="publishDate" value="<%= book.publishDate == null ? '' : book.publishDate.toISOString().split('T')[0] %>"  >
 </div>
     <!-- spliiting the date on T part because 2019-0--19T12:23 -->
 
