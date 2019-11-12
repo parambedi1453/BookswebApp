@@ -1,5 +1,5 @@
 <label>Title</label>
-<input type="text" name="title" >
+<input type="text" name="title"value="<%= book.title %>"  >
 
 
 <label>Author</label>
@@ -12,3 +12,8 @@
         <% } %>
 <% }) %>    
 </select> 
+
+<label>Publish Date</label>
+<input type="date" name="publiDate" value="<%= book.publishDate == null ? '' :book.publishDate.toISOString().split('T')[0] %>"  >
+<!-- spliiting the date on T part because 2019-0--19T12:23 -->
+
